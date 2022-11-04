@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">View &amp; Resources</string>
+    <string name="top_bar_search">Search</string>
+    <string name="top_bar_more">More</string>
+    <string name="app_top_bar_description">Contacts</string>
+    <string name="cart_top_bar_tag">Tag</string>
+    <string name="cart_top_bar_description">Cart</string>
+    <string name="input_field_user_name_hint">Name</string>
+    <string name="input_field_phone">Phone number</string>
+    <string name="input_select_hint">Select</string>
+    <string name="input_field_address_hint">Address</string>
+    <string name="input_field_city_hint">City</string>
+    <string name="input_field_state_hint">State</string>
+    <string name="input_field_zip_hint">Zip</string>
+    <string name="input_filed_birthday_hint">Birthday</string>
+    <string name="input_field_email_hint">E-mail</string>
+    <string name="input_field_password_hint">Password</string>
+    <string name="reset_password_label">Reset my password</string>
+    <string name="input_field_notes">Notes</string>
+    <string name="button_register">Register</string>
+    <string name="button_sign_in">Sign in</string>
+    <string name="cart_total_count">4 items in your cart</string>
+    <string name="button_pay_now">Pay now</string>
+    <string name="cart_item_caption">Caption</string>
+    <string name="register_label">Register</string>
+    <string name="sign_in_label">Sign In</string>
 </resources>

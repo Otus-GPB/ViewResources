@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.MaterialComponents.Subtitle2.ViewResources">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="TextAppearance.MaterialComponents.Body1.ViewResources">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+    <style name="TextAppearance.MaterialComponents.Body2.ViewResources">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <style name="TextAppearance.MaterialComponents.Caption.ViewResources">
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+    </style>
+</resources>

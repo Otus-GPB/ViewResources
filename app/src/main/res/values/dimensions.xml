@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="corner_rounded">999dp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
+    <dimen name="margin_very_large">26dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_smaller">8dp</dimen>
+    <dimen name="common_button_height">40dp</dimen>
+    <dimen name="pay_button_width">154dp</dimen>
+    <dimen name="pay_button_height">56dp</dimen>
+    <dimen name="text_input_height_large">56dp</dimen>
+    <dimen name="text_input_height">54dp</dimen>
+    <dimen name="text_height_very_large">32dp</dimen>
+    <dimen name="text_height_large">28dp</dimen>
+    <dimen name="text_height_medium">24dp</dimen>
+    <dimen name="text_height_small">20dp</dimen>
+    <dimen name="text_height_smaller">16dp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_smaller">12sp</dimen>
+    <dimen name="cart_item_image_width">48dp</dimen>
+    <dimen name="cart_item_image_height">48dp</dimen>
+    <dimen name="cart_item_image_padding">12dp</dimen>
+    <dimen name="cart_item_icon_width">16dp</dimen>
+    <dimen name="cart_item_icon_height">16dp</dimen>
+    <dimen name="cart_divider_height">240dp</dimen>
+</resources>

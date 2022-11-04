@@ -6,4 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".CartActivity">
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cart_top_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/cart_top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:menu="@menu/cart_top_bar"
+                app:navigationIcon="@drawable/icon_arrow_back"
+                app:titleTextColor="?attr/titleTextColor"
+                app:title="@string/cart_top_bar_description"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <TextView
+        android:theme="@style/TextSelectionThemeOverlay"
+        android:id="@+id/cart_count_text"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/text_height_small"
+        app:layout_constraintTop_toBottomOf="@id/cart_top_bar_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:text="@string/cart_total_count"/>
+
+    <include
+        layout="@layout/cart_item"
+        android:id="@+id/cart_item_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cart_count_text"
+        app:layout_constraintBottom_toTopOf="@id/cart_item_2"
+        android:layout_marginTop="@dimen/margin_smaller" />
+
+    <include
+        android:id="@+id/cart_item_2"
+        layout="@layout/cart_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/cart_item_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_1" />
+
+    <include
+        layout="@layout/cart_item"
+        android:id="@+id/cart_item_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_2"
+        app:layout_constraintBottom_toTopOf="@id/cart_item_4" />
+
+    <include
+        layout="@layout/cart_item"
+        android:id="@+id/cart_item_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cart_item_3"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_divider"/>
+
+    <View
+        android:id="@+id/horizontal_divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/dash_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/cart_divider_height"/>
+
+    <TextView
+        android:id="@+id/order"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/text_height_very_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/order_price"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_divider"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_medium"
+        app:layout_constraintHorizontal_weight="0.75"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:textColor="?attr/colorTertiary"
+        android:text="Your order total"/>
+
+    <TextView
+        android:id="@+id/order_price"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/text_height_very_large"
+        app:layout_constraintStart_toEndOf="@id/order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/order"
+        android:layout_marginStart="@dimen/margin_smaller"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintHorizontal_weight="0.25"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:textColor="?attr/colorTertiary"
+        android:gravity="end"
+        android:text="41$"/>
+
+    <LinearLayout
+        android:id="@+id/order_detailed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/detailed_price"
+        app:layout_constraintTop_toBottomOf="@id/order"
+        app:layout_constraintHorizontal_weight="0.75"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_medium">
+        <TextView
+            android:id="@+id/order_subtotal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:text="Subtotal"/>
+        <TextView
+            android:id="@+id/order_shipping"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:text="Shipping"/>
+        <TextView
+            android:id="@+id/order_tax"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:text="Tax"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailed_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/order"
+        app:layout_constraintStart_toEndOf="@id/order_detailed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="0.25"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_smaller"
+        android:layout_marginEnd="@dimen/margin_medium">
+        <TextView
+            android:id="@+id/subtotal_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:gravity="end"
+            android:text="36.00"/>
+        <TextView
+            android:id="@+id/shipping_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:gravity="end"
+            android:text="2.00"/>
+        <TextView
+            android:id="@+id/tax_price"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height_medium"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:gravity="end"
+            android:text="3.50"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="@dimen/pay_button_width"
+        android:layout_height="@dimen/pay_button_height"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/button_pay_now"
+        android:textAllCaps="false"
+        android:theme="@style/PayButtonThemeOverlay"
+        app:cornerRadius="@dimen/corner_rounded"
+        app:icon="@drawable/icon_pay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_detailed" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

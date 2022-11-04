@@ -1,6 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/sign_in_label"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/text_height_large"
+        android:text="@string/sign_in_label"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/register_label"
+        app:layout_constraintHorizontal_weight="0.65"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="@dimen/margin_large"/>
+
+    <TextView
+        android:id="@+id/register_label"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="@string/register_label"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:gravity="center_vertical | center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sign_in_label"
+        app:layout_constraintHorizontal_weight="0.35"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_smaller"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_input_height_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_label"
+        android:layout_marginTop="34dp"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/input_field_email_hint"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColorHint="?attr/colorOnTertiary">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_input_height_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_edit_text"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/input_field_password_hint"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColorHint="?attr/colorOnTertiary">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass_edit_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:theme="@style/LinkTextThemeOverlay"
+        android:id="@+id/reset_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height_smaller"
+        android:text="@string/reset_password_label"
+        android:textAppearance="?attr/textAppearanceCaption"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_edit_text"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:gravity="end"/>
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/common_button_height"
+        app:layout_constraintTop_toBottomOf="@id/reset_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/button_sign_in"
+        android:textAllCaps="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
